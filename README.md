@@ -8,14 +8,17 @@ To run the challenge
 3. pip install -r requirements.txt (in venv)
 
 --- db init--
+
 4. flask db init
 5. flask db migrate -m "helpPage table" (make commit)
 6. flask db upgrade (apply changes)
 
 --- endpoint init --
+
 7.uvicorn pyChallenge2:app --reload
 
 --- frontend ---
+
 8. navigate to the frontend-app folder
 9. npm i
 10. npm run start 
