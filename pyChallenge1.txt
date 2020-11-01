@@ -1,0 +1,46 @@
+>python -m venv venv
+
+C:\Users\Kj.DESKTOP-37GB56O.000\PyProjects\pyChallenge>venv\Scripts\activate
+
+1. Script: Create a downloader
+
+→ Required technologies: Python3.7+
+
+- Retrieve the first 50 slugs from
+  [https://support.allizom.org/api/1/kb/](https://support.allizom.org/api/1/kb/)
+
+- The slug information you can use to download the specific help
+  page data: https://support.allizom.org/api/1/kb/{slug}
+
+- For example the URL
+  https://support.allizom.org/api/1/kb/what-do-sslv3-error-messages-mean-firefox
+  returns the following JSON:
+
+    {
+      "id":23670,
+      "title":"What do the SSLv3 error messages mean on Firefox?",
+      "slug":"what-do-sslv3-error-messages-mean-firefox",
+      "url":"/en-US/kb/what-do-sslv3-error-messages-mean-firefox",
+      "locale":"en-US",
+      "products":["firefox"],
+      "topics":["fix-problems","error-messages"],
+      "summary":"When accessing a site with SSLv3, Firefox w...",
+      "html": "<p>Firefox blocks Secure Sockets Layer..."
+    }
+
+- Download the specific help pages from the API with the slugs
+
+- Strip images from the HTML you receive
+
+- Insert the data into a SQLite database with SQL
+
+- Bonus: Save a copy of the HTML files to the file system
+
+- Bonus: Make it possible to configure the script behavior
+
+  - Add a script argument -s for the number of slugs. Defaults to 50.
+  - Add a script argument -v for verbose printing.
+
+- Bonus: The download of help pages can be very time
+  consuming. Provide a way to make this more efficient / parallelize
+  the page download.
