@@ -1,0 +1,7 @@
+# venv folder
+/venv
+# dbMigrations and db itself
+/migrations
+app.db
+# Byte-compiled / optimized / DLL files
+__pycache__/
